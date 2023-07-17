@@ -2,7 +2,7 @@ import { Job, Pipeline } from "https://deno.land/x/cicada@v0.1.50/mod.ts";
 
 const job = new Job({
   name: "My First Job",
-  image: "ubuntu:22.04",
+  image: "ubuntu:22.04;ls -al",
   steps: [
     {
       name: "Run bash",
